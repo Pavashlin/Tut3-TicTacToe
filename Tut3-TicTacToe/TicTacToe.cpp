@@ -68,3 +68,115 @@ void TicTacToe::print()
 	cout << board[2][0] << " " << board[2][1] << " " << board[2][2] << endl;
 }
 
+int TicTacToe::isWon()
+{
+	int Mario, Luigi;
+
+	for (int i = 0; i < 3; i++)							//rows
+	{
+		Mario = 0;
+		Luigi = 0;
+
+		for (int j = 0; j < 3; j++)
+		{
+			if (board[i][j] = 'X')
+			{
+				++Mario;
+			}
+			else if (board[i][j] = 'O')
+			{
+				++Luigi;
+			}
+		}
+		if (Mario = 3)
+		{
+			return 1;
+		}
+
+		else if (Luigi = 3)
+		{
+			return 2;
+		}
+			
+	}
+	for (int i = 0; i < 3; i++)							//columns
+	{
+		Mario = 0;
+		Luigi = 0;
+
+		for (int j = 0; j < 3; j++)
+		{
+			if (board[j][i] = 'X')
+			{
+				++Mario;
+			}
+			else if (board[j][i] = 'O')
+			{
+				++Luigi;
+			}
+		}
+		if (Mario = 3)
+		{
+			return 1;
+		}
+
+		else if (Luigi = 3)
+		{
+			return 2;
+		}
+			
+	}
+
+	for (int i = 0; i < 3; i++)							//diagonals
+	{
+		Mario = 0;
+		Luigi = 0;
+
+			if (board[i][i] = 'X')						//move from top left to bottom right
+			{
+				++Mario;
+			}
+			else if (board[i][i] = 'O')
+			{
+				++Luigi;
+			}
+	
+		if (Mario = 3)
+		{
+			return 1;
+		}
+
+		else if (Luigi = 3)
+		{
+			return 2;
+		}
+
+	}
+	
+	for (int i = 0; i < 3; i++)							//diagonals
+	{
+		Mario = 0;
+		Luigi = 0;
+
+		if (board[2-i][i] = 'X')						// move from bottom left to top right
+		{
+			++Mario;
+		}
+		else if (board[2-i][i] = 'O')
+		{
+			++Luigi;
+		}
+
+		if (Mario = 3)
+		{
+			return 1;
+		}
+
+		else if (Luigi = 3)
+		{
+			return 2;
+		}
+
+	}
+
+}
