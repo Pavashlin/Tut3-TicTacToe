@@ -70,7 +70,7 @@ void TicTacToe::print()
 
 int TicTacToe::isWon()
 {
-	int Mario, Luigi;
+	int Mario, Luigi, princess=0;
 
 	for (int i = 0; i < 3; i++)							//rows
 	{
@@ -96,6 +96,10 @@ int TicTacToe::isWon()
 		else if (Luigi = 3)
 		{
 			return 2;
+		}
+		else
+		{
+			princess = 1;
 		}
 			
 	}
@@ -124,6 +128,10 @@ int TicTacToe::isWon()
 		{
 			return 2;
 		}
+		else
+		{
+			princess = 1;
+		}
 			
 	}
 
@@ -150,7 +158,12 @@ int TicTacToe::isWon()
 		{
 			return 2;
 		}
+		else
+		{
+			princess = 1;
+		}
 
+		
 	}
 	
 	for (int i = 0; i < 3; i++)							//diagonals
@@ -176,7 +189,21 @@ int TicTacToe::isWon()
 		{
 			return 2;
 		}
+		else
+		{
+			princess = 1;
+		}
 
 	}
+	if (princess = 1)
+	{
+		cout << "Game results in a draw "<<endl;
+	}
 
+	else
+	{
+		cout << "Game is still in progress"<<endl;
+	}
+	
+	return 0;
 }
