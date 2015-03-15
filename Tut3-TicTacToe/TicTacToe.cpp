@@ -47,25 +47,30 @@ void TicTacToe::move(int r, int c)
 
 	else
 	{
-		if (player = 1)
+		if (player == 1)
 		{
 			board[r][c] = 'X';
 			player = 2;
+			cout << '\n' << endl;
+			cout << "Player 2 move" << endl;
 		}
 
 		else
 		{
 			board[r][c] = 'O';
 			player = 1;
+			cout << '\n' << endl;
+			cout << "Player 1 move" << endl;
 		}
 	}
 }
 
 void TicTacToe::print()
 {
-	cout << board[0][0] << " " << board[0][1] << " " << board[0][2] << endl;
-	cout << board[1][0] << " " << board[1][1] << " " << board[1][2] << endl;
-	cout << board[2][0] << " " << board[2][1] << " " << board[2][2] << endl;
+	cout << '|' << board[0][0] << '|' << board[0][1] << '|' << board[0][2] << '|' << endl;
+	cout << '|' << board[1][0] << '|' << board[1][1] << '|' << board[1][2] << '|' << endl;
+	cout << '|' << board[2][0] << '|' << board[2][1] << '|' << board[2][2] << '|' << endl;
+	
 }
 
 int TicTacToe::isWon()
