@@ -9,7 +9,6 @@ public:
 	void move(int, int);
 	void print();
 	int isWon();
-	int draw();
 	TicTacToe();
 	~TicTacToe();
 };
