@@ -7,7 +7,7 @@ class TicTacToe
 public:
 	void restart();
 	void move(int, int);
-	int print();
+	void print();
 	int isWon();
 	int draw();
 	TicTacToe();
