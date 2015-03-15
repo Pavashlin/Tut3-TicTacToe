@@ -52,7 +52,7 @@ void TicTacToe::move(int r, int c)
 			board[r][c] = 'X';
 			player = 2;
 			cout << '\n' << endl;
-			cout << "Player 2 move" << endl;
+			cout << "****Player 2 move****" << endl;
 		}
 
 		else
@@ -60,7 +60,7 @@ void TicTacToe::move(int r, int c)
 			board[r][c] = 'O';
 			player = 1;
 			cout << '\n' << endl;
-			cout << "Player 1 move" << endl;
+			cout << "****Player 1 move****" << endl;
 		}
 	}
 }
@@ -86,19 +86,19 @@ int TicTacToe::isWon()
 		{
 			if (board[i][j] = 'X')
 			{
-				++Mario;
+				Mario++;
 			}
 			else if (board[i][j] = 'O')
 			{
-				++Luigi;
+				Luigi++;
 			}
 		}
-		if (Mario = 3)
+		if (Mario == 3)
 		{
 			return 1;
 		}
 
-		else if (Luigi = 3)
+		else if (Luigi == 3)
 		{
 			return 2;
 		}
@@ -117,19 +117,19 @@ int TicTacToe::isWon()
 		{
 			if (board[j][i] = 'X')
 			{
-				++Mario;
+				Mario++;
 			}
 			else if (board[j][i] = 'O')
 			{
-				++Luigi;
+				Luigi++;
 			}
 		}
-		if (Mario = 3)
+		if (Mario == 3)
 		{
 			return 1;
 		}
 
-		else if (Luigi = 3)
+		else if (Luigi == 3)
 		{
 			return 2;
 		}
@@ -147,19 +147,19 @@ int TicTacToe::isWon()
 
 			if (board[i][i] = 'X')						//move from top left to bottom right
 			{
-				++Mario;
+				Mario++;
 			}
 			else if (board[i][i] = 'O')
 			{
-				++Luigi;
+				Luigi++;
 			}
 	
-		if (Mario = 3)
+		if (Mario == 3)
 		{
 			return 1;
 		}
 
-		else if (Luigi = 3)
+		else if (Luigi == 3)
 		{
 			return 2;
 		}
@@ -178,19 +178,19 @@ int TicTacToe::isWon()
 
 		if (board[2-i][i] = 'X')						// move from bottom left to top right
 		{
-			++Mario;
+			Mario++;
 		}
 		else if (board[2-i][i] = 'O')
 		{
-			++Luigi;
+			Luigi++;
 		}
 
-		if (Mario = 3)
+		if (Mario == 3)
 		{
 			return 1;
 		}
 
-		else if (Luigi = 3)
+		else if (Luigi == 3)
 		{
 			return 2;
 		}
@@ -200,7 +200,7 @@ int TicTacToe::isWon()
 		}
 
 	}
-	if (princess = 1)
+	if (princess == 1)
 	{
 		cout << "Game results in a draw "<<endl;
 	}
