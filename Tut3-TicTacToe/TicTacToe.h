@@ -3,9 +3,10 @@ class TicTacToe
 {
 	private:
 		char board[3][3];
+		int player;
 public:
 	void restart();
-	int move();
+	void move(int, int);
 	int print();
 	int isWon();
 	int draw();
