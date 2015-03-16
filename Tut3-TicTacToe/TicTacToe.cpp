@@ -37,12 +37,14 @@ void TicTacToe::move(int r, int c)
 	
 	if (r>2 || c > 2 || r < 0 || c < 0)
 	{
-		cout<<"Illegal move"<<endl;											
+		cout << '\n' << endl;
+		cout<<"Illegal move!"<<endl;											
 	}
 
 	else if (board[r][c] != ' ')
 	{
-		cout << "Illegal move"<<endl;  								
+		cout << '\n' << endl;
+		cout << "Illegal move!"<<endl;  								
 	}
 
 	else
@@ -84,11 +86,11 @@ int TicTacToe::isWon()
 
 		for (int j = 0; j < 3; j++)
 		{
-			if (board[i][j] = 'X')
+			if (board[i][j] == 'X')
 			{
 				Mario++;
 			}
-			else if (board[i][j] = 'O')
+			else if (board[i][j] == 'O')
 			{
 				Luigi++;
 			}
@@ -115,11 +117,11 @@ int TicTacToe::isWon()
 
 		for (int j = 0; j < 3; j++)
 		{
-			if (board[j][i] = 'X')
+			if (board[j][i] == 'X')
 			{
 				Mario++;
 			}
-			else if (board[j][i] = 'O')
+			else if (board[j][i] == 'O')
 			{
 				Luigi++;
 			}
@@ -145,11 +147,11 @@ int TicTacToe::isWon()
 		Mario = 0;
 		Luigi = 0;
 
-			if (board[i][i] = 'X')						//move from top left to bottom right
+			if (board[i][i] == 'X')						//move from top left to bottom right
 			{
 				Mario++;
 			}
-			else if (board[i][i] = 'O')
+			else if (board[i][i] == 'O')
 			{
 				Luigi++;
 			}
@@ -176,11 +178,11 @@ int TicTacToe::isWon()
 		Mario = 0;
 		Luigi = 0;
 
-		if (board[2-i][i] = 'X')						// move from bottom left to top right
+		if (board[2-i][i] =='X')						// move from bottom left to top right
 		{
 			Mario++;
 		}
-		else if (board[2-i][i] = 'O')
+		else if (board[2-i][i] == 'O')
 		{
 			Luigi++;
 		}
@@ -194,7 +196,7 @@ int TicTacToe::isWon()
 		{
 			return 2;
 		}
-		else
+		else 
 		{
 			princess = 1;
 		}
