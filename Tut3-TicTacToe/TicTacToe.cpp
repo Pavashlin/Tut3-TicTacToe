@@ -189,7 +189,7 @@ int TicTacToe::isWon()
 		{
 			for (int j = 0; j < 3; j++)
 			{
-				if (board[i][j] != ' ')
+				if (board[i][j] != ' ')					//counts empty spaces to determine if ther is a draw
 				{
 					princess++;
 				}
