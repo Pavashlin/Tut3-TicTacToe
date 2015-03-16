@@ -104,11 +104,7 @@ int TicTacToe::isWon()
 		{
 			return 2;
 		}
-		else
-		{
-			princess = 1;
-		}
-			
+	
 	}
 	for (int i = 0; i < 3; i++)							//columns
 	{
@@ -135,10 +131,7 @@ int TicTacToe::isWon()
 		{
 			return 2;
 		}
-		else
-		{
-			princess = 1;
-		}
+	
 			
 	}
 
@@ -165,11 +158,6 @@ int TicTacToe::isWon()
 		{
 			return 2;
 		}
-		else
-		{
-			princess = 1;
-		}
-
 		
 	}
 	
@@ -196,19 +184,28 @@ int TicTacToe::isWon()
 		{
 			return 2;
 		}
-		else 
+
+		for (int i = 0; i < 3; i++)
 		{
-			princess = 1;
+			for (int j = 0; j < 3; j++)
+			{
+				if (board[i][j] != ' ')
+				{
+					princess++;
+				}
+			}
 		}
 
 	}
-	if (princess == 1)
+	if (princess == 9)
 	{
+		cout << '\n' << endl;
 		cout << "Game results in a draw "<<endl;
 	}
 
 	else
 	{
+		cout << '\n' << endl;
 		cout << "Game is still in progress"<<endl;
 	}
 	
